@@ -59,4 +59,5 @@
     <string name="date">Data</string>
     <string name="description">Descrição</string>
     <string name="title">Título</string>
+    <string name="profile">Perfil</string>
 </resources>
