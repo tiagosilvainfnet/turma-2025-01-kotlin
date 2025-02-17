@@ -60,4 +60,6 @@
     <string name="description">Descrição</string>
     <string name="title">Título</string>
     <string name="profile">Perfil</string>
+    <string name="username">Usuário</string>
+    <string name="name">Nome</string>
 </resources>
