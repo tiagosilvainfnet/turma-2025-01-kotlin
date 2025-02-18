@@ -53,6 +53,12 @@ class MainActivity : AppCompatActivity() {
             Navigation.goToScreen(this, TaskActivity::class.java)
         }
 
+        listView.setOnItemLongClickListener { parent, view, position, id ->
+            val task = fakeData[position]
+            Toast.makeText(this, "Task ${task.id} long deleted", Toast.LENGTH_SHORT).show()
+            true
+        }
+
         fabAddTask.setOnClickListener {
             Navigation.goToScreen(this, TaskActivity::class.java)
         }
