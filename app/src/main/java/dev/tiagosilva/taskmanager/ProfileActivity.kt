@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import dev.tiagosilva.taskmanager.utils.AuthUtils
 import dev.tiagosilva.taskmanager.utils.Navigation
 
 class ProfileActivity : AppCompatActivity() {
@@ -28,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         logoutBtn.setOnClickListener {
-            Navigation.goToScreen(this, LoginActivity::class.java)
+            AuthUtils.logout(this);
         }
 
     }

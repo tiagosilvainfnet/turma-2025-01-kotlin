@@ -1,16 +1,19 @@
 package dev.tiagosilva.taskmanager
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 import dev.tiagosilva.taskmanager.utils.Navigation
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
+    val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance();
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -20,7 +23,12 @@ class LoginActivity : AppCompatActivity() {
         val registerLink = findViewById<TextView>(R.id.create_account)
 
         btnLogin.setOnClickListener {
-            Navigation.goToScreen(this, MainActivity::class.java)
+            val email = findViewById<TextView>(R.id.emailInput).text.toString()
+            val password = findViewById<TextView>(R.id.passwordInput).text.toString()
+
+            CoroutineScope(Dispatchers.IO).launch {
+                login(email, password)
+            }
         }
 
         forgotPassword.setOnClickListener {
@@ -30,5 +38,20 @@ class LoginActivity : AppCompatActivity() {
         registerLink.setOnClickListener {
             Navigation.goToScreen(this, RegisterActivity::class.java)
         }
+    }
+
+    fun login(email: String, password: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = firebaseAuth.currentUser
+                    if (user != null) {
+                        Toast.makeText(this@LoginActivity, "Seja bem-vindo ${user.email}", Toast.LENGTH_SHORT).show()
+                        Navigation.goToScreen(this@LoginActivity, MainActivity::class.java)
+                    }
+                } else {
+                    Toast.makeText(this@LoginActivity, "Falha ao realizar login", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
