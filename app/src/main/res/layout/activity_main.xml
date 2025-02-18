@@ -33,6 +33,23 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60sp">
+        <View
+            android:id="@+id/fragment_weather"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:background="@color/black"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tasks"
+            android:scrollbars="vertical"
+            android:layout_below="@id/fragment_weather"/>
+    </RelativeLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_task"
         android:layout_width="wrap_content"
