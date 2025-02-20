@@ -62,4 +62,5 @@
     <string name="profile">Perfil</string>
     <string name="username">Usuário</string>
     <string name="name">Nome</string>
+    <string name="task">Tarefa</string>
 </resources>
