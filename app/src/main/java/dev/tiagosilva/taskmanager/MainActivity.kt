@@ -7,12 +7,18 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import dev.tiagosilva.taskmanager.utils.AuthUtils
 import dev.tiagosilva.taskmanager.utils.Navigation
 
 data class Task(val id: Int, val title: String, val subtitle: String)
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance();
+        val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -64,20 +70,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         logoutBtn.setOnClickListener {
-            Navigation.goToScreen(this, LoginActivity::class.java)
+            AuthUtils.logout(this);
         }
 
         profileBtn.setOnClickListener {
             Navigation.goToScreen(this, ProfileActivity::class.java)
         }
 
-        val firebaseUser: Any? = null
         verifySession(firebaseUser)
     }
 
     private fun verifySession(firebaseUser: Any?) {
         if (firebaseUser == null) {
-//            Navigation.goToScreen(this, LoginActivity::class.java)
+            Navigation.goToScreen(this, LoginActivity::class.java)
         }
     }
 }
