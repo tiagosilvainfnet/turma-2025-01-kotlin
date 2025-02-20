@@ -62,4 +62,11 @@
     <string name="profile">Perfil</string>
     <string name="username">Usuário</string>
     <string name="name">Nome</string>
+    <string name="task">Tarefa</string>
+    <string name="password_empty">Senha vazia</string>
+    <string name="password_very_weak">Senha muito fraca</string>
+    <string name="password_weak">Senha fraca</string>
+    <string name="password_normal">Senha normal</string>
+    <string name="password_strong">Senha forte</string>
+    <string name="password_very_strong">Senha muito forte</string>
 </resources>
