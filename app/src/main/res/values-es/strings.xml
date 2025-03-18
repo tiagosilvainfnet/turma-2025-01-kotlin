@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">TaskManager</string>
-    <string name="login_title">Login</string>
+    <string name="login_title">Entrar</string>
     <string name="email">E-mail</string>
-    <string name="password">Password</string>
-    <string name="submit_login_btn">Sign In</string>
-    <string name="forgot_password">Forgot password</string>
-    <string name="register_link">Create account</string>
-    <string name="register_title">Register</string>
-    <string name="passwordConfirm">Confirm password</string>
-    <string name="submit_register_btn">Create account</string>
-    <string name="login_link">Sign In</string>
-    <string name="submit_forgot_password_btn">Recovery password</string>
+    <string name="password">Contraseña</string>
+    <string name="submit_login_btn">Entrar</string>
+    <string name="forgot_password">Olvidé mi contraseña</string>
+    <string name="register_link">Crear una cuenta</string>
+    <string name="register_title">Registro</string>
+    <string name="passwordConfirm">Confirmar Contraseña</string>
+    <string name="submit_register_btn">Crear una cuenta</string>
+    <string name="login_link">Entrar</string>
+    <string name="submit_forgot_password_btn">Recuperar contraseña</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="next">Próximo</string>
+    <string name="previous">Anterior</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -54,21 +54,19 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="home">Home</string>
-    <string name="save">Save</string>
-    <string name="time">Hour</string>
-    <string name="date">Date</string>
-    <string name="description">Description</string>
-    <string name="title">Title</string>
-    <string name="profile">Profile</string>
-    <string name="username">User</string>
-    <string name="name">Name</string>
-    <string name="task">Task</string>
-    <string name="password_empty">Password cleaned</string>
-    <string name="password_very_weak">Password very weak</string>
-    <string name="password_weak">Password weak</string>
-    <string name="password_normal">Normal password</string>
-    <string name="password_strong">Password strong</string>
-    <string name="password_very_strong">Password very strong</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">Guardar</string>
+    <string name="time">Tiempo</string>
+    <string name="date">Fecha</string>
+    <string name="description">Descripción</string>
+    <string name="title">Título</string>
+    <string name="profile">Perfil</string>
+    <string name="username">Usuario</string>
+    <string name="name">Nombre</string>
+    <string name="task">Tarea</string>
+    <string name="password_empty">Contraseña vacía</string>
+    <string name="password_very_weak">La contraseña es demasiado débil</string>
+    <string name="password_weak">Contraseña débil</string>
+    <string name="password_normal">Contraseña normal</string>
+    <string name="password_strong">Contraseña segura</string>
+    <string name="password_very_strong">Contraseña muy fuerte</string>
 </resources>

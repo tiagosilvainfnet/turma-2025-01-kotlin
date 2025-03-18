@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import dev.tiagosilva.taskmanager.fragments.WeatherFragment
 import dev.tiagosilva.taskmanager.utils.AuthUtils
 import dev.tiagosilva.taskmanager.utils.Navigation
 
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_weather, WeatherFragment()).commit()
 
         val fabAddTask = findViewById<FloatingActionButton>(R.id.fab_add_task)
         val logoutBtn = findViewById<ImageView>(R.id.logout)

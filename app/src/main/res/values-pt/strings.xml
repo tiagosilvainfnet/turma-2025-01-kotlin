@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">TaskManager</string>
-    <string name="login_title">Login</string>
+    <string name="login_title">Entrar</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
-    <string name="submit_login_btn">Sign In</string>
-    <string name="forgot_password">Forgot password</string>
-    <string name="register_link">Create account</string>
-    <string name="register_title">Register</string>
-    <string name="passwordConfirm">Confirm password</string>
-    <string name="submit_register_btn">Create account</string>
-    <string name="login_link">Sign In</string>
-    <string name="submit_forgot_password_btn">Recovery password</string>
+    <string name="submit_login_btn">Entrar</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+    <string name="register_link">Criar uma conta</string>
+    <string name="register_title">Registrar</string>
+    <string name="passwordConfirm">Confirmar senha</string>
+    <string name="submit_register_btn">Criar conta</string>
+    <string name="login_link">Entrar</string>
+    <string name="submit_forgot_password_btn">Recuperar senha</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -53,22 +53,20 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="home">Home</string>
-    <string name="save">Save</string>
-    <string name="time">Hour</string>
-    <string name="date">Date</string>
-    <string name="description">Description</string>
-    <string name="title">Title</string>
-    <string name="profile">Profile</string>
-    <string name="username">User</string>
-    <string name="name">Name</string>
-    <string name="task">Task</string>
-    <string name="password_empty">Password cleaned</string>
-    <string name="password_very_weak">Password very weak</string>
-    <string name="password_weak">Password weak</string>
-    <string name="password_normal">Normal password</string>
-    <string name="password_strong">Password strong</string>
-    <string name="password_very_strong">Password very strong</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Início</string>
+    <string name="save">Salvar</string>
+    <string name="time">Horário</string>
+    <string name="date">Data</string>
+    <string name="description">Descrição</string>
+    <string name="title">Título</string>
+    <string name="profile">Perfil</string>
+    <string name="username">Usuário</string>
+    <string name="name">Nome</string>
+    <string name="task">Tarefa</string>
+    <string name="password_empty">Senha vazia</string>
+    <string name="password_very_weak">Senha muito fraca</string>
+    <string name="password_weak">Senha fraca</string>
+    <string name="password_normal">Senha normal</string>
+    <string name="password_strong">Senha forte</string>
+    <string name="password_very_strong">Senha muito forte</string>
 </resources>

@@ -37,11 +37,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60sp">
-        <View
+        <FrameLayout
             android:id="@+id/fragment_weather"
             android:layout_width="match_parent"
-            android:layout_height="200sp"
-            android:background="@color/black"/>
+            android:layout_height="wrap_content"
+        />
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
