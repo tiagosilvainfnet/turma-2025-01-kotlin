@@ -69,4 +69,5 @@
     <string name="password_normal">Senha normal</string>
     <string name="password_strong">Senha forte</string>
     <string name="password_very_strong">Senha muito forte</string>
+    <string name="loading_informations">Carregando informações...</string>
 </resources>

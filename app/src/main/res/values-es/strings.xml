@@ -69,4 +69,5 @@
     <string name="password_normal">Contraseña normal</string>
     <string name="password_strong">Contraseña segura</string>
     <string name="password_very_strong">Contraseña muy fuerte</string>
+    <string name="loading_informations">Cargando información...</string>
 </resources>

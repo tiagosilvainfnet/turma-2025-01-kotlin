@@ -15,5 +15,29 @@
             android:layout_height="60dp"
             android:layout_gravity="left"
             />
+        <LinearLayout
+            android:layout_marginLeft="8sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/temperatureView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:text="@string/loading_informations"/>
+            <TextView
+                android:id="@+id/descriptionView"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/cityStateCountryView"
+                android:textSize="12sp"
+                android:textColor="@color/grey_700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

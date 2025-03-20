@@ -15,7 +15,6 @@ import dev.tiagosilva.taskmanager.utils.Password
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
     val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance();
