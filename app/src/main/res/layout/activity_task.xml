@@ -68,7 +68,7 @@
             android:id="@+id/date_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"/>
+            android:focusable="false"/>
         <ImageView
             android:id="@+id/date_icon"
             android:layout_width="25dp"
@@ -94,7 +94,7 @@
             android:id="@+id/time_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"/>
+            android:focusable="false"/>
         <ImageView
             android:id="@+id/time_icon"
             android:layout_width="25dp"

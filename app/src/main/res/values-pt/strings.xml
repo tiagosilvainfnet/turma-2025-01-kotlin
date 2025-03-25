@@ -70,4 +70,14 @@
     <string name="password_strong">Senha forte</string>
     <string name="password_very_strong">Senha muito forte</string>
     <string name="loading_informations">Carregando informações...</string>
+    <string name="error_loading_tasks">Erro ao carregar tarefas.</string>
+    <string name="title_delete_task">Deletar tarefa?</string>
+    <string name="message_delete_task">Tem certeza de que deseja excluir esta tarefa?</string>
+    <string name="confirm">Confirmar</string>
+    <string name="task_deleted">Tarefa deletada</string>
+    <string name="cancel">Cancelar</string>
+    <string name="error_loading_task">Erro ao carregar tarefa</string>
+    <string name="task_edited">Tarefa editada!</string>
+    <string name="error_task_edited">Erro ao editar tarefa.</string>
+    <string name="task_saved">Tarefa salva!</string>
 </resources>

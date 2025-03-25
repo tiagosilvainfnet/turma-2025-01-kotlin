@@ -71,4 +71,14 @@
     <string name="password_very_strong">Password very strong</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="loading_informations">Loading informations...</string>
+    <string name="error_loading_tasks">Error to load tasks.</string>
+    <string name="title_delete_task">Delete task?</string>
+    <string name="message_delete_task">Are you sure you want to delete this task?</string>
+    <string name="confirm">Confirm</string>
+    <string name="task_deleted">Task deleted</string>
+    <string name="cancel">Cancel</string>
+    <string name="error_loading_task">Error to load task</string>
+    <string name="task_edited">Task edited!</string>
+    <string name="error_task_edited">Error to edit task.</string>
+    <string name="task_saved">Task saved!</string>
 </resources>

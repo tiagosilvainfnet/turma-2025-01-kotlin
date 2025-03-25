@@ -10,5 +10,8 @@ class Navigation {
             val intent = Intent(context, activity);
             startActivity(context, intent, null);
         }
+        fun goToScreen(context: Context, intent: Intent){
+            startActivity(context, intent, null);
+        }
     }
 }
