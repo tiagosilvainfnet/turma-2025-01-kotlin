@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TaskManager</string>
+    <string name="app_name">Gestor de Tareas</string>
     <string name="login_title">Entrar</string>
     <string name="email">E-mail</string>
     <string name="password">Contraseña</string>
@@ -80,4 +80,9 @@
     <string name="task_edited">Tarea editada!</string>
     <string name="error_task_edited">Erro ao editar tarea.</string>
     <string name="task_saved">Tarea salva!</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_refused">Permission refused</string>
+    <string name="error_to_capture_image">Erro ao capturar imagem</string>
+    <string name="phone">Phone</string>
+    <string name="profile_updated">Profile Updated!</string>
 </resources>

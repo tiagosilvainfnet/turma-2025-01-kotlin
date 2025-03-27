@@ -52,6 +52,7 @@
             android:layout_marginTop="80dp"
             />
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
@@ -63,6 +64,7 @@
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/gallery_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -84,6 +86,7 @@
                 android:id="@+id/email_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:hint="@string/email" />
 
             <EditText
@@ -97,6 +100,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name" />
+
+            <EditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone" />
 
             <Button
                 android:id="@+id/save_btn"
