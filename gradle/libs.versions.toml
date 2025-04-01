@@ -1,9 +1,13 @@
 [versions]
 agp = "8.8.0"
 circleimageview = "3.1.0"
+firebaseAnalytics = "22.4.0"
+firebaseAnalyticsVersion = "20.0.1"
 firebaseAuth = "21.0.1"
 firebaseAuthKtx = "21.1.0"
+firebaseCrashlyticsKtx = "19.4.2"
 firebaseDatabase = "20.0.2"
+firebaseMessaging = "24.1.1"
 firebaseStorage = "20.0.0"
 kotlin = "1.9.24"
 coreKtx = "1.15.0"
@@ -20,10 +24,20 @@ navigationUiKtx = "2.6.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+com-google-firebase-firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalytics" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-analytics-v2001 = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalyticsVersion" }
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx", version.ref = "firebaseCrashlyticsKtx" }
 firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabase" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+firebase-perf-ktx = { module = "com.google.firebase:firebase-perf-ktx" }
 firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebaseStorage" }
+google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+google-firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

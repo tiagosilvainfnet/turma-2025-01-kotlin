@@ -18,6 +18,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import dev.tiagosilva.taskmanager.R
+import dev.tiagosilva.taskmanager.utils.ErrorHandle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -107,33 +108,48 @@ class WeatherFragment : Fragment() {
         }
     }
 
-    private suspend fun getWeatherData(latitude: Double, longitude: Double): WeatherData {
-        val apiKey = "09934fb391cb45249c7232214251903"
-        val url = "https://api.weatherapi.com/v1/current.json?lang=pt&key=$apiKey&q=$latitude,$longitude"
-        val jsonText = withContext(Dispatchers.IO) {
-            URL(url).readText()
-        }
-        val jsonObject = JSONObject(jsonText)
-        val current = jsonObject.getJSONObject("current")
-        val temperature = current.getDouble("temp_c")
-        val description = current.getJSONObject("condition").getString("text")
-        val conditionCode = current.getJSONObject("condition").getInt("code")
+    private suspend fun getWeatherData(latitude: Double, longitude: Double): WeatherData? {
+        try {
+            val apiKey = "09934fb391cb45249c7232214251903"
+            val url =
+                "https://api.weatherapi.com/v1/current.json?lang=pt&key=$apiKey&q=$latitude,$longitude"
+            val jsonText = withContext(Dispatchers.IO) {
+                URL(url).readText()
+            }
+            val jsonObject = JSONObject(jsonText)
+            val current = jsonObject.getJSONObject("current")
+            val temperature = current.getDouble("temp_c")
+            val description = current.getJSONObject("condition").getString("text")
+            val conditionCode = current.getJSONObject("condition").getInt("code")
 
-        return WeatherData(temperature, description, conditionCode);
+            return WeatherData(temperature, description, conditionCode);
+        } catch (e: Exception){
+            e.printStackTrace()
+            ErrorHandle.handleException("WatherFragment >> getWeatherData", e.message.toString())
+            return null;
+        }
     }
 
-    private suspend fun getCityDistrict(latitude: Double, longitude: Double): DistrictDate {
-        val apiKey = "bdc_f018f000fa1f402b9a2458db356db6e9"
-        val url = "https://api-bdc.net/data/reverse-geocode?latitude=$latitude&longitude=$longitude&localityLanguage=pt&key=$apiKey"
-        val jsonText = withContext(Dispatchers.IO) {
-            URL(url).readText()
-        }
-        val jsonObject = JSONObject(jsonText)
-        val city = jsonObject.getString("city")
-        val district = jsonObject.getString("locality")
-        val country = jsonObject.getString("countryName")
+    private suspend fun getCityDistrict(latitude: Double, longitude: Double): DistrictDate? {
+        try{
+            val apiKey = "bdc_f018f000fa1f402b9a2458db356db6e9"
+            val url =
+                "https://api-bdc.net/data/reverse-geocode?latitude=$latitude&longitude=$longitude&localityLanguage=pt&key=$apiKey"
+            val jsonText = withContext(Dispatchers.IO) {
+                URL(url).readText()
+            }
+            val jsonObject = JSONObject(jsonText)
+            val city = jsonObject.getString("city")
+            val district = jsonObject.getString("locality")
+            val country = jsonObject.getString("countryName")
 
-        return DistrictDate(city, district, country);
+            return DistrictDate(city, district, country);
+        }
+        catch (e: Exception){
+            e.printStackTrace()
+            ErrorHandle.handleException("WatherFragment >> getCityDistrict", e.message.toString())
+            return null;
+        }
     }
 
     private fun getLocation(view: View) {
@@ -149,7 +165,9 @@ class WeatherFragment : Fragment() {
                     val weatherData = getWeatherData(location.latitude, location.longitude)
                     val cityDistrict = getCityDistrict(location.latitude, location.longitude)
 
-                    updateUi(weatherData, cityDistrict, view)
+                    if (cityDistrict != null && weatherData != null) {
+                        updateUi(weatherData, cityDistrict, view)
+                    }
                 }
             }
         });

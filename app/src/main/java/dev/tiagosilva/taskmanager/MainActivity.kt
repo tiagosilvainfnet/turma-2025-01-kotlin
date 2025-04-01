@@ -18,6 +18,10 @@ import com.google.firebase.database.ValueEventListener
 import dev.tiagosilva.taskmanager.fragments.WeatherFragment
 import dev.tiagosilva.taskmanager.utils.AuthUtils
 import dev.tiagosilva.taskmanager.utils.Navigation
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 data class Task(val id: Int, val title: String, val subtitle: String)
 
@@ -58,6 +62,13 @@ class MainActivity : AppCompatActivity() {
 
         verifySession(firebaseUser)
         loadData(adapter, listView)
+        requestNotificationPermission()
+    }
+
+    private fun requestNotificationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 0)
+        }
     }
 
     private fun loadData(adapter: ArrayAdapter<String>, listView: ListView) {
