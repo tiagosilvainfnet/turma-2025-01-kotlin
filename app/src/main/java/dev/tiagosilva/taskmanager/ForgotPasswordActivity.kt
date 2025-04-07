@@ -1,6 +1,7 @@
 package dev.tiagosilva.taskmanager
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -38,6 +39,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
                     Toast.makeText(this@ForgotPasswordActivity, "Link enviado com sucesso!!!", Toast.LENGTH_SHORT).show()
                     Navigation.goToScreen(this@ForgotPasswordActivity, LoginActivity::class.java)
                 } else {
+                    Log.e("TAG", "Falha ao enviar link de reset de senha.", task.exception)
                     Toast.makeText(this@ForgotPasswordActivity, "Falha ao enviar link de reset de senha.", Toast.LENGTH_SHORT).show()
                 }
             }

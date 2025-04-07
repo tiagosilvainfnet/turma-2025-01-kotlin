@@ -96,9 +96,10 @@ class ProfileActivity : AppCompatActivity() {
         val db_ref = FirebaseDatabase.getInstance().getReference("users/${uid}/data/")
         db_ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if(!snapshot.exists()) return;
-
-                val profile = snapshot.value as HashMap<String, String>;
+                var profile = HashMap<String, String>();
+                if(snapshot.exists()) {
+                    profile = snapshot.value as HashMap<String, String>;
+                }
 
                 profile["username"] = usernameInput.text.toString()
                 profile["name"] = nameInput.text.toString()

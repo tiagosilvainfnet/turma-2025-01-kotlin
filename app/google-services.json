@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "194632531933",
-    "project_id": "kotlin-task-manager",
-    "storage_bucket": "kotlin-task-manager.firebasestorage.app"
+    "project_number": "488731014129",
+    "firebase_url": "https://task-manager-8647a-default-rtdb.firebaseio.com",
+    "project_id": "task-manager-8647a",
+    "storage_bucket": "task-manager-8647a.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:194632531933:android:03801e70f798ac3e4cc034",
+        "mobilesdk_app_id": "1:488731014129:android:7d9854aa91fce9fd9eca50",
         "android_client_info": {
           "package_name": "dev.tiagosilva.taskmanager"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCTqpkMKpyWg72UUkxcs-vNqxqWNc6lmvU"
+          "current_key": "AIzaSyBlXlQjD_5GsqvLk51xByoGff-EUSEA1QI"
         }
       ],
       "services": {
